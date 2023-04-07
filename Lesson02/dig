@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ -z $1 ]]; then
+  1>&2 echo oof
+  exit 1
+fi
+
+result=$(dig "$1")
+ip=$(dig +short "$1")
+domain=$(dig +short -x "$ip")
+dns=$(echo "$result" | grep -P -o '(?<=SERVER: ).*(?=#)')
+echo "DNS server of $1: $dns"
+echo "IP address of $1: $ip"
+echo "Reverse domains of $ip: $domain"
