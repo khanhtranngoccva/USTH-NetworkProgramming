@@ -1,0 +1,10 @@
+#!/bin/bash
+
+base_name=$(basename "$1")
+# shellcheck disable=SC2001
+name=$(echo "$base_name" | sed "s/\..*$//g")
+directory_name=$(dirname "$1")
+
+# shellcheck disable=SC2001
+ext_name=$(echo "$2" | sed "s/^\.//")
+mv "$1" "$directory_name/$name.$ext_name"
