@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK 
+Connection: close 
+Date: Mon Feb 6 10:22:50 CET 2017 
+Server: netcat special deal 
+Content-Length: 136 
+Content-Type: text/html; charset=utf-8
+Cache-Control: max-age=60 
+
+
+<!DOCTYPE html>
+ <html> 
+<head>
+<title>Page Title</title>
+</head> 
+<body>
+Current date is: Mon Feb 6 10:22:50 CET 2017
+</body>
+
+</html>
